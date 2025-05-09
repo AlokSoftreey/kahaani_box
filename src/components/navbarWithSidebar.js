@@ -14,6 +14,7 @@ import {
 import { useRouter } from "next/navigation";
 import Swal from "sweetalert2";
 import HeroSection from "./heroSection";
+import ActiveStory from "./story/activeStory";
 
 export default function NavbarWithSidebar({ children }) {
   const [profileCard, setProfileCard] = useState(false);
@@ -46,7 +47,7 @@ export default function NavbarWithSidebar({ children }) {
     <div className="flex h-screen overflow-hidden">
       {/* Sidebar */}
       <aside
-        className={`bg-white shadow-md h-full transition-all duration-300 ${
+        className={`bg-black text-white shadow-md h-full transition-all duration-300 ${
           sidebarOpen ? "w-64" : "w-0"
         }`}
       >
@@ -56,21 +57,21 @@ export default function NavbarWithSidebar({ children }) {
         <nav className="flex flex-col p-2">
           <Link
             href="/"
-            className="flex items-center gap-2 p-2 hover:bg-gray-200 rounded"
+            className="flex items-center gap-2 p-2 hover:bg-gray-200 hover:text-black rounded"
           >
             <HomeIcon className="w-5 h-5" />
             <span>Home</span>
           </Link>
           <Link
             href="/profile"
-            className="flex items-center gap-2 p-2 hover:bg-gray-200 rounded"
+            className="flex items-center gap-2 p-2 hover:bg-gray-200 hover:text-black rounded"
           >
             <UserIcon className="w-5 h-5" />
             <span>Profile</span>
           </Link>
           <button
             onClick={handleLogout}
-            className="flex items-center gap-2 p-2 hover:bg-gray-200 rounded"
+            className="flex items-center gap-2 p-2 hover:bg-gray-200 hover:text-black rounded"
           >
             <Cog6ToothIcon className="w-5 h-5" />
             <span>Logout</span>
@@ -162,10 +163,9 @@ export default function NavbarWithSidebar({ children }) {
           </div>
         </header>
 
-        <main className="bg-gray-100 overflow-y-auto h-full">
+        <main className="bg-gray-100 overflow-y-auto h-full pb-10">
           {/* Hero Section */}
           <HeroSection />
-          
           <div className="py-6 px-8">{children}</div>
         </main>
       </div>

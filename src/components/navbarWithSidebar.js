@@ -166,7 +166,7 @@ export default function NavbarWithSidebar({ children }) {
           {/* Hero Section */}
           <HeroSection />
           
-          <div className="p-4">{children}</div>
+          <div className="py-6 px-8">{children}</div>
         </main>
       </div>
     </div>

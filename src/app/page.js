@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <NavbarWithSidebar>
         <div>
-          <h2 className="text-2xl font-bold">Welcome to the dashboard!</h2>
+          <h2 className="text-2xl font-bold">Stories</h2>
           <p>This is main content area.</p>
         </div>
       </NavbarWithSidebar>
